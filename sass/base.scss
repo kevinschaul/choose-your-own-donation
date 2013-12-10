@@ -1,0 +1,94 @@
+@import 'bootstrap.scss';
+@import 'bootstrap-combobox.scss';
+
+$serif: Georgia, serif;
+$sans-serif: Arial, sans-serif;
+
+.clear {
+  clear: both;
+}
+
+.graphic {
+  width: 960px;
+  margin: auto;
+  font-family: $sans-serif;
+  font-size: 16px;
+}
+
+.sentence {
+  margin: 80px 0 40px 210px;
+}
+
+.form-group {
+  margin: 0 6px;
+}
+
+#amount-wrapper {
+  width: 110px;
+}
+
+.input-group-addon {
+  width: 30%;
+  float: left;
+  line-height: 20px;
+}
+
+#amount.form-control {
+  width: 70%;
+}
+
+#pac-wrapper {
+  .input-group {
+    width: 280px;
+  }
+  .form-control.combobox {
+    float: left;
+    width: 240px;
+  }
+  .input-group-addon {
+    width: 40px;
+    cursor: pointer;
+  }
+  .input-group-addon:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.add-on {
+  line-height: 24px;
+}
+
+#sentence-results-target {
+  min-height: 200px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.amount {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  opacity: 0;
+}
+.value {
+  font-size: 1.6em;
+}
+
+.committee {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.info {
+  margin: 4px 0;
+}
+.info-value {
+  font-weight: bold;
+}
+
+.notes {
+  font-size: 0.8em;
+  color: #666;
+  margin: 4px 0;
+}
+

@@ -1,0 +1,11 @@
+{
+  "name": "2013-12-3-inter-pac-spending",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-php": "~0.2.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt": "~0.4.1"
+  }
+}
