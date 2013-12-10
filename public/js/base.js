@@ -93,6 +93,7 @@ var pacdag = {
           return d.Committee;
         })
 
+    // TODO Add change listener to money
     $('.combobox').combobox()
       .change(self.runCalculation);
   },
@@ -109,7 +110,8 @@ var pacdag = {
         self.sentenceResultTemplate({
           amounts: _.sortBy(self.amounts, function(d) {
             return -d.amount;
-          })
+          }),
+          initialSrc: self.initialSrc
         })
       );
     } else {
@@ -137,6 +139,7 @@ var pacdag = {
     var self = this;
 
     self.initialAmount = amount;
+    self.initialSrc = src;
     self.amounts = {};
     self._calculatePayments(amount, src);
 

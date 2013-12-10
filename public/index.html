@@ -26,6 +26,7 @@
   </div>
 
   <div id='sentence-results-target'></div>
+
   <div class='notes'>Based on average spending between pacs from last three election cycles (2006-2012). <a href='#'>Read our methodology</a>.</div>
   <div class='notes'>Donations calculated to be less than $0.01 are not shown.</div>
   <div class='notes'>Source: XXXXXX</div>
@@ -33,11 +34,15 @@
 
 <script id='sentence-results-template' type='text/template'>
 <% _.each(amounts, function(d) { %>
-  <div class='amount'>
+  <div class='amount<% if (d.pacid === initialSrc) { %> initial-src<% } %>'>
     <span class='value'>
       <%= d.amountFormatted %>
     </span>
-    went to
+    <% if (d.pacid === initialSrc) { %>
+      stayed within
+    <% } else { %>
+      went to
+    <% } %>
     <span class='committee'>
       <%= d.pac.Committee %>
     </span>
