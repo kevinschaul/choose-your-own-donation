@@ -69,21 +69,32 @@ $sans-serif: Arial, sans-serif;
   padding: 10px 0;
   border-top: 1px solid #ccc;
   opacity: 0;
-}
-.value {
-  font-size: 1.6em;
-}
 
-.committee {
-  font-weight: bold;
-  font-size: 1.1em;
-}
+  .value {
+    font-size: 1.6em;
+  }
 
-.info {
-  margin: 4px 0;
+  .committee {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 2px;
+  }
+
+  .info {
+    margin: 4px 0;
+
+    .info-value {
+      font-weight: bold;
+    }
+  }
 }
-.info-value {
-  font-weight: bold;
+.amount.initial-src {
+  .value {
+    font-size: 2.0em;
+  }
+  .committee {
+    font-size: 1.6em;
+  }
 }
 
 .notes {

@@ -106,11 +106,16 @@ var pacdag = {
 
     if (amount && pacid) {
       self.calculatePayments(amount, pacid);
+
+      var amountsSorted = _.sortBy(self.amounts, function(d) {
+        if (d.pacid === self.initialSrc) {
+          return -Infinity;
+        }
+        return -d.amount;
+      });
       self.sentenceResultTarget.html(
         self.sentenceResultTemplate({
-          amounts: _.sortBy(self.amounts, function(d) {
-            return -d.amount;
-          }),
+          amounts: amountsSorted,
           initialSrc: self.initialSrc
         })
       );
@@ -143,11 +148,23 @@ var pacdag = {
     self.amounts = {};
     self._calculatePayments(amount, src);
 
+    var initialInAmounts = false
+    _.each(self.amounts, function(d) {
+      if (d.pacid === self.initialSrc) {
+        initialInAmounts = true;
+      }
+    });
+
+    if (!initialInAmounts) {
+      self.amounts[self.initialSrc] = {
+        pacid: self.initialSrc,
+        amount: 0,
+      }
+    }
+
     _.each(self.amounts, function(d) {
       d.amountFormatted = self.formatDollar(d.amount);
       d.pac = self.pacSummaryById[d.pacid];
-      console.log(d);
-      console.log(d.pac);
     });
   },
 
