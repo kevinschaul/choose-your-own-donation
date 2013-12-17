@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>2013-12-3-inter-pac-spending</title>
+<?php readfile('http://www.startribune.com/templates/vh?vid=236193971&sosp=/politics'); ?>
 
-  <link rel="stylesheet" href="css/base.css" />
-</head>
-<body>
+<link rel="stylesheet" href="css/base.css" />
 
-<h1>2013-12-3-inter-pac-spending</h1>
 <div class='graphic'>
   <div class='sentence'>
 
@@ -26,6 +19,7 @@
   </div>
 
   <div id='sentence-results-target'></div>
+
   <div class='notes'>Based on average spending between pacs from last three election cycles (2006-2012). <a href='#'>Read our methodology</a>.</div>
   <div class='notes'>Donations calculated to be less than $0.01 are not shown.</div>
   <div class='notes'>Source: XXXXXX</div>
@@ -33,11 +27,15 @@
 
 <script id='sentence-results-template' type='text/template'>
 <% _.each(amounts, function(d) { %>
-  <div class='amount'>
+  <div class='amount<% if (d.pacid === initialSrc) { %> initial-src<% } %>'>
     <span class='value'>
       <%= d.amountFormatted %>
     </span>
-    went to
+    <% if (d.pacid === initialSrc) { %>
+      was spent directly by
+    <% } else { %>
+      went to
+    <% } %>
     <span class='committee'>
       <%= d.pac.Committee %>
     </span>
@@ -63,6 +61,6 @@
 <script src="lib/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/bootstrap-combobox.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/base.js" type="text/javascript" charset="utf-8"></script>
-</body>
-</html>
+
+<?php readfile('http://www.startribune.com/templates/vf?vid=236193971&sosp=/politics'); ?>
 
