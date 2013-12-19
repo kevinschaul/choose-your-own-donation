@@ -9,14 +9,21 @@ $sans-serif: Arial, sans-serif;
 }
 
 .graphic {
-  width: 960px;
+  width: 630px;
   margin: auto;
   font-family: $sans-serif;
   font-size: 16px;
 }
 
+.graphic *, .graphic *:before, .graphic *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
 .sentence {
-  margin: 80px 0 40px 210px;
+  margin: 80px 0 40px 50px;
 }
 
 .form-group {
@@ -31,6 +38,7 @@ $sans-serif: Arial, sans-serif;
   width: 30%;
   float: left;
   line-height: 20px;
+  height:34px;
 }
 
 #amount.form-control {
@@ -65,13 +73,14 @@ $sans-serif: Arial, sans-serif;
 }
 
 .amount {
-  margin: 10px 0;
-  padding: 10px 0;
+  margin: 10px 0 10px 30px;
+  padding: 20px 0 0 0;
   border-top: 1px solid #ccc;
   opacity: 0;
 
   .value {
     font-size: 1.6em;
+    font-weight:bold;
   }
 
   .committee {
@@ -91,10 +100,15 @@ $sans-serif: Arial, sans-serif;
 .amount.initial-src {
   .value {
     font-size: 2.0em;
+    color:#451313;
+    font-weight:bold;
   }
   .committee {
     font-size: 1.6em;
   }
+  margin: 20px 0;
+  border-top: 3px solid #ccc;
+  color:#000;
 }
 
 .notes {
