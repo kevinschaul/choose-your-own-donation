@@ -93,8 +93,10 @@ var pacdag = {
           return d.Committee;
         })
 
-    // TODO Add change listener to money
     $('.combobox').combobox()
+      .change(self.runCalculation);
+
+    $('#amount')
       .change(self.runCalculation);
   },
 
