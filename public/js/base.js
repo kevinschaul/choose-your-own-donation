@@ -103,7 +103,8 @@ var pacdag = {
   runCalculation: function() {
     var self = this;
 
-    var amount = self.sentenceAmount.node().value;
+    var amount = self.validateAmount(self.sentenceAmount.node().value);
+    self.sentenceAmount.node().value = amount;
     var pacid = self.sentenceSelect.node().value.toString();
 
     if (amount && pacid) {
@@ -140,6 +141,20 @@ var pacdag = {
           .style('opacity', 1)
     });
 
+  },
+
+  validateAmount: function(amount) {
+    var self = this;
+
+    var a = amount;
+    a = a.replace(',', '');
+    a = parseInt(a);
+
+    if (a > 1000000) {
+      return 100
+    }
+
+    return a;
   },
 
   calculatePayments: function(amount, src) {
