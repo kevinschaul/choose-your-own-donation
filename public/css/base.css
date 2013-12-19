@@ -7828,7 +7828,7 @@ th.hidden-lg, td.hidden-lg {
   width: 630px;
   margin: auto;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* line 18, ../../sass/base.scss */
@@ -7838,22 +7838,27 @@ th.hidden-lg, td.hidden-lg {
   box-sizing: border-box;
 }
 
-/* line 25, ../../sass/base.scss */
+/* line 24, ../../sass/base.scss */
+.graphic li {
+  margin-left: 7px;
+}
+
+/* line 27, ../../sass/base.scss */
 .sentence {
   margin: 80px 0 40px 50px;
 }
 
-/* line 29, ../../sass/base.scss */
+/* line 31, ../../sass/base.scss */
 .form-group {
   margin: 0 6px;
 }
 
-/* line 33, ../../sass/base.scss */
+/* line 35, ../../sass/base.scss */
 #amount-wrapper {
   width: 110px;
 }
 
-/* line 37, ../../sass/base.scss */
+/* line 39, ../../sass/base.scss */
 .input-group-addon {
   width: 30%;
   float: left;
@@ -7861,87 +7866,92 @@ th.hidden-lg, td.hidden-lg {
   height: 34px;
 }
 
-/* line 44, ../../sass/base.scss */
+/* line 46, ../../sass/base.scss */
 #amount.form-control {
   width: 70%;
 }
 
-/* line 49, ../../sass/base.scss */
+/* line 51, ../../sass/base.scss */
 #pac-wrapper .input-group {
   width: 280px;
 }
-/* line 52, ../../sass/base.scss */
+/* line 54, ../../sass/base.scss */
 #pac-wrapper .form-control.combobox {
   float: left;
   width: 240px;
 }
-/* line 56, ../../sass/base.scss */
+/* line 58, ../../sass/base.scss */
 #pac-wrapper .input-group-addon {
   width: 40px;
   cursor: pointer;
 }
-/* line 60, ../../sass/base.scss */
+/* line 62, ../../sass/base.scss */
 #pac-wrapper .input-group-addon:hover {
   background-color: #e0e0e0;
 }
 
-/* line 65, ../../sass/base.scss */
+/* line 67, ../../sass/base.scss */
 .add-on {
   line-height: 24px;
 }
 
-/* line 69, ../../sass/base.scss */
+/* line 71, ../../sass/base.scss */
 #sentence-results-target {
   min-height: 200px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
-/* line 75, ../../sass/base.scss */
+/* line 77, ../../sass/base.scss */
 .amount {
   margin: 10px 0 10px 30px;
   padding: 20px 0 0 0;
   border-top: 1px solid #ccc;
   opacity: 0;
 }
-/* line 81, ../../sass/base.scss */
+/* line 83, ../../sass/base.scss */
 .amount .value {
   font-size: 1.6em;
   font-weight: bold;
 }
-/* line 86, ../../sass/base.scss */
+/* line 88, ../../sass/base.scss */
 .amount .committee {
   font-weight: bold;
   font-size: 1.1em;
   margin-left: 2px;
 }
-/* line 92, ../../sass/base.scss */
+/* line 94, ../../sass/base.scss */
 .amount .info {
   margin: 4px 0;
 }
-/* line 95, ../../sass/base.scss */
+/* line 97, ../../sass/base.scss */
 .amount .info .info-value {
   font-weight: bold;
 }
 
-/* line 100, ../../sass/base.scss */
+/* line 103, ../../sass/base.scss */
+.info:nth-of-type(1) {
+  padding-bottom: 7px;
+}
+
+/* line 107, ../../sass/base.scss */
 .amount.initial-src {
   margin: 20px 0;
   border-top: 3px solid #ccc;
   color: #000;
 }
-/* line 101, ../../sass/base.scss */
+/* line 108, ../../sass/base.scss */
 .amount.initial-src .value {
   font-size: 2.0em;
   color: #451313;
   font-weight: bold;
 }
-/* line 106, ../../sass/base.scss */
+/* line 113, ../../sass/base.scss */
 .amount.initial-src .committee {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
-/* line 114, ../../sass/base.scss */
+/* line 121, ../../sass/base.scss */
 .notes {
   font-size: 0.8em;
   color: #666;

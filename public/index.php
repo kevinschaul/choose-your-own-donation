@@ -40,17 +40,19 @@
       <%= d.pac.Committee %>
     </span>
     <div class='info'>
-      A <span class='info-value'><%= d.pac.cat2 %> <%= d.pac.stype %></span> based in <span class='info-value'><%= d.pac.CommCity %>, <%= d.pac.CommState %></span>.
+      A <%= d.pac.cat2 %> <%= d.pac.stype %> based in <%= d.pac.CommCity %>, <%= d.pac.CommState %>.
     </div>
-    <div class='info'>
-      Spent <span class='info-value'><%= d.pac.spentFormatted %></span> over the past three election cycles.
-    </div>
-    <div class='info'>
-      Raised <span class='info-value'><%= d.pac.receivedFormatted %></span> in the same time period.
-    </div>
-    <div class='info'>
-      Had <span class='info-value'><%= d.pac.endcash2012 %></span> on hand at the end of 2012.
-    </div>
+    
+      <li>
+        Spent <span class='info-value'><%= d.pac.spentFormatted %></span> over the past three election cycles.
+      </li>
+      <li>
+        Raised <span class='info-value'><%= d.pac.receivedFormatted %></span> in the same time period.
+      </li>
+      <li>
+        Had <span class='info-value'><%= d.pac.endcash2012 %></span> on hand at the end of 2012.
+      </li>
+    
   </div>
 <% }); %>
 </script>
