@@ -24,10 +24,7 @@ var pacdag = {
   handleData: function(error, pacSummary, interPacDonations) {
     var self = this;
 
-    self.pacSummary = _.filter(pacSummary, function(d) {
-      return true;
-      return (+d.totspend >= 500000) && (+d.topac > 0 || +d.frompac > 0);
-    });
+    self.pacSummary = pacSummary;
 
     self.pacSummaryById = {};
     _.each(self.pacSummary, function(d) {
