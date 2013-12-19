@@ -20,9 +20,9 @@
 
   <div id='sentence-results-target'></div>
 
-  <div class='notes'>Based on average spending between pacs from last three election cycles (2006-2012). <a href='#'>Read our methodology</a>.</div>
+  <div class='notes'>Based on average spending between PACs in last three election cycles (2006-2012).</div>
   <div class='notes'>Donations calculated to be less than $0.01 are not shown.</div>
-  <div class='notes'>Source: XXXXXX</div>
+  <div class='notes'>Source: Star Tribune analysis of Minnesota Campaign Finance and Disclosure Board data</div>
 </div>
 
 <script id='sentence-results-template' type='text/template'>

@@ -24,10 +24,7 @@ var pacdag = {
   handleData: function(error, pacSummary, interPacDonations) {
     var self = this;
 
-    self.pacSummary = _.filter(pacSummary, function(d) {
-      return true;
-      return (+d.totspend >= 500000) && (+d.topac > 0 || +d.frompac > 0);
-    });
+    self.pacSummary = pacSummary;
 
     self.pacSummaryById = {};
     _.each(self.pacSummary, function(d) {
@@ -93,15 +90,18 @@ var pacdag = {
           return d.Committee;
         })
 
-    // TODO Add change listener to money
     $('.combobox').combobox()
+      .change(self.runCalculation);
+
+    $('#amount')
       .change(self.runCalculation);
   },
 
   runCalculation: function() {
     var self = this;
 
-    var amount = self.sentenceAmount.node().value;
+    var amount = self.validateAmount(self.sentenceAmount.node().value);
+    self.sentenceAmount.node().value = amount;
     var pacid = self.sentenceSelect.node().value.toString();
 
     if (amount && pacid) {
@@ -138,6 +138,20 @@ var pacdag = {
           .style('opacity', 1)
     });
 
+  },
+
+  validateAmount: function(amount) {
+    var self = this;
+
+    var a = amount;
+    a = a.replace(',', '');
+    a = parseInt(a);
+
+    if (a > 1000000) {
+      return 100
+    }
+
+    return a;
   },
 
   calculatePayments: function(amount, src) {
