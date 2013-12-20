@@ -3,6 +3,16 @@ var pacdag = {
   CUTOFF: 0.01,
   formatDollar: d3.format('$,.2f'),
 
+  categoryMap: {
+    biz: 'business',
+    labor: 'labor',
+    indian: 'Native Americans',
+    lawyers: 'lawyers',
+    candidate: 'candidates',
+    prodfl: 'pro-DFL causes',
+    prorpm: 'pro-Republican causes'
+  },
+
   init: function() {
     var self = this;
     _.bindAll(this, 'handleData', 'runCalculation');
@@ -49,6 +59,8 @@ var pacdag = {
 
       d.spentFormatted = self.formatDollar(d.spent);
       d.receivedFormatted = self.formatDollar(d.received);
+
+      d.catReadable = self.categoryMap[d.cat2];
     });
 
     _.each(self.interPacDonations, function(d) {

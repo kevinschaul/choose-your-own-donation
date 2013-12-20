@@ -40,8 +40,13 @@
       <%= d.pac.Committee %>
     </span>
     <div class='info'>
-      A <span class='info-value'><%= d.pac.cat2 %> <%= d.pac.stype %></span> based in <span class='info-value'><%= d.pac.CommCity %>, <%= d.pac.CommState %></span>.
+        Based in <span class='info-value'><%= d.pac.CommCity %>, <%= d.pac.CommState %></span>.
     </div>
+    <% if (d.pac.catReadable && d.pac.catReadable !== '') { %>
+    <div class='info'>
+        Focuses on <span class='info-value'><%= d.pac.catReadable %></span>.
+    </div>
+    <% } %>
     <div class='info'>
       Spent <span class='info-value'><%= d.pac.spentFormatted %></span> over the past three election cycles.
     </div>
