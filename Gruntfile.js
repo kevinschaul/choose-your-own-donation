@@ -30,7 +30,8 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'sass',
           cssDir: 'public/css',
-          watch: true
+          watch: true,
+          environment: 'production'
         }
       }
     },
