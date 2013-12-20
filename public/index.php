@@ -1,8 +1,35 @@
 <?php readfile('http://www.startribune.com/templates/vh?vid=236193971&sosp=/politics'); ?>
 
 <link rel="stylesheet" href="css/base.css" />
+<style>
+.fallback {
+  display: none;
+}
+.fallback-info {
+  width: 100%;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #AAC2AF;
+  margin: 60px auto;
+}
+</style>
+<!--[if lte IE 8]>
+<style>
+.fallback {
+  display: block !important;
+}
+.sentence {
+  display: none;
+}
+</style>
+<![endif]-->
+
 
 <div class='graphic'>
+  <div class="fallback fallback-info">Interactive portions of this graphic are not available in this version of Internet Explorer.</div>
+  <img class='fallback' src='img/fallback.png' alt='fallback' />
   <div class='sentence'>
 
     <form class='form-inline'>
