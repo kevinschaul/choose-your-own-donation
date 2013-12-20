@@ -22,7 +22,7 @@ $sans-serif: Arial, sans-serif;
 }
 
 .graphic li{
-  margin-left:7px
+  margin:0 0 2px 30px;
 }
 .sentence {
   margin: 80px 0 40px 50px;
@@ -101,7 +101,7 @@ $sans-serif: Arial, sans-serif;
 }
 
 .info:nth-of-type(1) {
-  padding-bottom:7px;
+  padding:0 0 3px 30px;
 }
 
 .amount.initial-src {
@@ -111,7 +111,8 @@ $sans-serif: Arial, sans-serif;
     font-weight:bold;
   }
   .committee {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    line-height:110%;
   }
   margin: 20px 0;
   border-top: 3px solid #ccc;
