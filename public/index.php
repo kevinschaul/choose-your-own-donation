@@ -47,7 +47,7 @@
 
   <div id='sentence-results-target'></div>
 
-  <div class='notes'>Based on average spending between PACs in last three election cycles (2006-2012).</div>
+  <div class='notes'>Based on average spending between PACs in last three election cycles (2007-2012).</div>
   <div class='notes'>Donations calculated to be less than $0.01 are not shown.</div>
   <div class='notes'>Source: Star Tribune analysis of Minnesota Campaign Finance and Disclosure Board data</div>
 </div>
