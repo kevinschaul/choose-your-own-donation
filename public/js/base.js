@@ -159,7 +159,7 @@ var pacdag = {
     a = a.replace(',', '');
     a = parseInt(a);
 
-    if (a > 1000000) {
+    if (a > 1000000 || a <= 0) {
       return 100
     }
 
