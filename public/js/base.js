@@ -199,7 +199,7 @@ var pacdag = {
 
     // Sanity check. If this happens, something is wrong.
     if (amount > self.initialAmount) {
-      console.log('Skipping amount: ', amount);
+      //console.log('Skipping amount: ', amount);
       return;
     }
 
