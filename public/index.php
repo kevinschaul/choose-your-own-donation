@@ -75,9 +75,7 @@
     <li>
       Raised <%= d.pac.receivedFormatted %> in the same time period.
     </li>
-    <li>
-      Had <%= d.pac.endcash2012 %> on hand at the end of 2012.
-    </li>
+    <% if (d.pac.endcash2012 && d.pac.endcash2012 !== '') { %> <li>Had <%= d.pac.endcash2012 %> on hand at the end of 2012.</li> <% } %>
   </div>
 <% }); %>
 </script>
