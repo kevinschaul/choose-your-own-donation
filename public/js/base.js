@@ -198,9 +198,10 @@ var pacdag = {
     var self = this;
 
     // Sanity check. If this happens, something is wrong.
+    // This happens in at least one instance because of a minor rounding
+    // error.
     if (amount > self.initialAmount) {
-      //console.log('Skipping amount: ', amount);
-      return;
+      amount = self.initialAmount;
     }
 
     // We will subtract from this value each time we recurse.
